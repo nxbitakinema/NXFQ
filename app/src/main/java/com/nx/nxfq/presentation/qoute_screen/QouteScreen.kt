@@ -3,10 +3,13 @@ package com.nx.nxfq.presentation.qoute_screen
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nx.nxfq.component.TopAppBarQ
 import com.nx.nxfq.presentation.qoute_screen.component.AddAlertDialog
@@ -21,6 +24,7 @@ fun QouteScreen(
 ) {
 
     var openDialog by remember { mutableStateOf(false) }
+
 
     Scaffold(
         topBar = {
@@ -51,4 +55,6 @@ fun QouteScreen(
             )
         }
     )
+
 }
+
