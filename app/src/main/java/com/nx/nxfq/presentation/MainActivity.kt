@@ -1,19 +1,26 @@
 package com.nx.nxfq.presentation
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.Text
+import com.nx.nxfq.presentation.qoute_screen.QouteScreen
+import com.nx.nxfq.ui.theme.NXFQTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
+
         setContent {
-
-            Text(text = "TEST RUN APP 02")
-
+            NXFQTheme {
+                QouteScreen()
+            }
         }
     }
 }
