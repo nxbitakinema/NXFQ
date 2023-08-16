@@ -1,7 +1,6 @@
 package com.nx.nxfq.presentation.qoute_screen.component
 
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -16,7 +15,7 @@ fun QouteContent(
     deleteQoute: (qouteId: String) -> Unit
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize().padding(padding)
+        modifier = Modifier.padding(padding)
     ) {
         items(
             items = qoutes

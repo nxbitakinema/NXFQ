@@ -9,22 +9,18 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.unit.dp
-import com.nx.nxfq.core.Constant
 import com.nx.nxfq.core.Constant.ADD
 import com.nx.nxfq.core.Constant.ADD_QOUTE
 import com.nx.nxfq.core.Constant.AUTHOR
+import com.nx.nxfq.core.Constant.CANCEL
 import com.nx.nxfq.core.Constant.EMPTY_STRING
 import com.nx.nxfq.core.Constant.QOUTE_TITLE
-import kotlinx.coroutines.job
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,7 +31,6 @@ fun AddAlertDialog(
 
     var title by remember { mutableStateOf(EMPTY_STRING) }
     var auther by remember { mutableStateOf(EMPTY_STRING) }
-    val focusRequester = FocusRequester()
 
     AlertDialog(
         onDismissRequest = closeDialog,
@@ -54,13 +49,7 @@ fun AddAlertDialog(
                             text = QOUTE_TITLE
                         )
                     },
-                    modifier = Modifier.focusRequester(focusRequester)
                 )
-                LaunchedEffect(Unit) {
-                    coroutineContext.job.invokeOnCompletion {
-                        focusRequester.requestFocus()
-                    }
-                }
                 Spacer(
                     modifier = Modifier.height(16.dp)
                 )
@@ -82,7 +71,7 @@ fun AddAlertDialog(
                 }
             ) {
                 Text(
-                    text = Constant.CANCEL
+                    text = CANCEL
                 )
             }
         },

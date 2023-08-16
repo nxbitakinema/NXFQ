@@ -1,7 +1,7 @@
 package com.nx.nxfq.presentation.qoute_screen.component
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -12,10 +12,10 @@ fun DeleteIcon(
     deleteQoute: () -> Unit
 ) {
     IconButton(
-        onClick = deleteQoute
+        onClick = deleteQoute,
     ) {
         Icon(
-            imageVector = Icons.Default.Close,
+            imageVector = Icons.Default.KeyboardArrowRight,
             contentDescription = DELETE_QOUTE
         )
     }

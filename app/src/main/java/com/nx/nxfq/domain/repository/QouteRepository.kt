@@ -13,8 +13,7 @@ interface QouteRepository {
 
     fun getQouteFromFirestore(): Flow<AppResponse>
 
-    suspend fun addQouteToFirestore(
-        title: String, author: String): AddQouteResponse
+    suspend fun addQouteToFirestore(title: String, author: String): AddQouteResponse
 
     suspend fun deleteQouteFromFirestore(qouteId: String): DeleteQouteResponse
 

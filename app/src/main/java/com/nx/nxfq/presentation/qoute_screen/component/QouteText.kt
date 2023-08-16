@@ -15,9 +15,9 @@ fun QouteText(
     Text(
         text = qouteText,
         color = Color.DarkGray,
-        fontWeight = FontWeight.ExtraLight,
-        fontSize = 18.sp,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 28.sp,
         fontStyle = FontStyle.Italic,
-        textAlign = TextAlign.Right
+        textAlign = TextAlign.End
     )
 }

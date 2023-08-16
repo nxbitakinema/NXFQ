@@ -5,7 +5,6 @@ import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.nx.nxfq.presentation.qoute_screen.QouteScreen
-import com.nx.nxfq.ui.theme.NXFQTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @Suppress("DEPRECATION")
@@ -18,9 +17,7 @@ class MainActivity : ComponentActivity() {
         actionBar?.hide()
 
         setContent {
-            NXFQTheme {
-                QouteScreen()
-            }
+            QouteScreen()
         }
     }
 }

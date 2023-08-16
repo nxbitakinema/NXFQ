@@ -4,10 +4,13 @@ object Constant {
 
     // app
     const val TAG = "AppTag"
+    const val HEAD_NAME = "NXFQ"
 
     // firestore
     const val COLLECTION_NAME = "qoute"
     const val TITLE = "title"
+    const val ID = "id"
+
 
     // action
     const val ADD_QOUTE = "Add a book"
