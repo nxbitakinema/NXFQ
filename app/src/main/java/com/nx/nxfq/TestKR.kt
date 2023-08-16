@@ -5,5 +5,5 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun TestKR() {
-    Text(text = "TESTKR")
+    Text(text = "TESTssKR")
 }
