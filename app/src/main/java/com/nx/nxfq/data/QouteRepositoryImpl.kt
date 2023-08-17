@@ -1,7 +1,8 @@
 package com.nx.nxfq.data
 
 import com.google.firebase.firestore.CollectionReference
-import com.nx.nxfq.core.Constant.ID
+import com.google.firebase.firestore.Query
+import com.nx.nxfq.core.Constant.DATE_FOR_FIRESTORE
 import com.nx.nxfq.domain.model.Qoute
 import com.nx.nxfq.domain.model.Response.Failure
 import com.nx.nxfq.domain.model.Response.Success
@@ -20,7 +21,7 @@ class QouteRepositoryImpl @Inject constructor(
 ) : QouteRepository {
 
     override fun getQouteFromFirestore() = callbackFlow {
-        val snapshotListener = qouteRef.orderBy(ID).addSnapshotListener { snapshot, e ->
+        val snapshotListener = qouteRef.orderBy(DATE_FOR_FIRESTORE, Query.Direction.DESCENDING).addSnapshotListener { snapshot, e ->
             val qouteResponse = if (snapshot != null) {
                 val qoute = snapshot.toObjects(Qoute::class.java)
                 Success(qoute)

@@ -8,23 +8,16 @@ object Constant {
 
     // firestore
     const val COLLECTION_NAME = "qoute"
-    const val TITLE = "title"
-    const val ID = "id"
+    const val DATE_FOR_FIRESTORE = "dateForFirestore"
 
-
-    // action
-    const val ADD_QOUTE = "Add a book"
-    const val DELETE_QOUTE = "Delete a book"
-
-    // buttons
-    const val ADD = "add"
-    const val CANCEL = "cancel"
+    // add dialog
+    const val DIALOG_NAME = "QUOTE"
+    const val BUTTON_ADD = "+"
+    const val BUTTON_CANCEL = "-"
 
     // placeholders
-    const val QOUTE_TITLE = "title"
+    const val QOUTE_TEXT = "text"
     const val AUTHOR = "author"
-    const val COMPANY = "company"
-    const val RATING = "rating"
     const val EMPTY_STRING = ""
 
 }
