@@ -3,6 +3,8 @@ build in jetpack compose. use for typing quote and upload to cloud firestore
 
 https://github.com/nxbitakinema/NXFQ/assets/93174599/ae0a9482-8870-41a5-af6b-63ab4cccc628
 
+![Q1](https://github.com/nxbitakinema/NXFQ/assets/93174599/b004daa2-d2e0-45fb-87e2-374e38662ee8)
+![Q2](https://github.com/nxbitakinema/NXFQ/assets/93174599/5be4f0ab-1867-45c7-97b6-cfb38da01119)
 
 
 ## android architecture
